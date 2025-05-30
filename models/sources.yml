@@ -17,3 +17,12 @@ sources:
       tables:
         - name: payment
           description: the payment source from Stripe
+          freshness:
+            error_after:
+              count: 2
+              period: day
+            warn_after:
+              count: 1
+              period: day
+          loaded_at_field: _batched_at
+          
