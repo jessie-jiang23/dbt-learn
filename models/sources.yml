@@ -10,3 +10,10 @@ sources:
             description: One record per customer.
           - name: orders
             description: One record per order. Includes cancelled and deleted orders.
+    - name: stripe
+      description: Sources from Stripe
+      database: dbt-tutorial
+      schema: stripe
+      tables:
+        - name: payment
+          description: the payment source from Stripe
