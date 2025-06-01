@@ -2,18 +2,23 @@ version: 2
 
 models:
   - name: stg_customers
+    description: the staging customer table
     columns:
       - name: customer_id
+        description: unique ID for each customer
         tests:
           - unique
           - not_null
   - name: stg_orders
+    description: staging table for orders
     columns:
       - name: order_id
+        description: unique ID for each order
         tests:
           - unique
           - not_null
       - name: status
+        description: "{{ doc('order_status')}}"
         tests:
           - accepted_values:
               values:
