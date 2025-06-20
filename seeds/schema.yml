@@ -9,4 +9,4 @@ seeds:
           - unique
           - not_null
       - name: customer_id
-      
+      - name: email
